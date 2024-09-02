@@ -20,7 +20,7 @@
 --fw-700: 700;
 }
 body {
-  background-image: url('../src/Components/Assets/hero-bg.jpg');
+  background-image: url('./hero-bg.jpg');
   
   background-size: cover;
   margin: 0;
