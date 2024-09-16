@@ -33,7 +33,7 @@ const Addproduct = () => {
     formData.append('product', image);
 
     try {
-      const response = await fetch('http://localhost:4000/upload', {
+      const response = await fetch('https://connect-local-backendnew.onrender.com/upload', {
         method: 'POST',
         body: formData,
       });
@@ -48,7 +48,7 @@ const Addproduct = () => {
       if (responseData.success) {
         product.image = responseData.image_url;
         console.log('Product with Image URL:', product);
-        await fetch('http://localhost:4000/addproduct', {
+        await fetch('https://connect-local-backendnew.onrender.com/addproduct', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
