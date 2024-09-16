@@ -1,6 +1,9 @@
 # Connect Local
 
 **Connect Local** is a full-stack web application built using the MERN (MongoDB, Express.js, React, Node.js) stack. The platform facilitates booking local service providers such as barbers, plumbers, tailors, and milk vendors. It offers user-friendly interfaces for both customers and service providers, along with robust backend functionalities to manage bookings, user data, and communication.
+**The live project Links**
+userspage-https://connect-local-frontendnew.onrender.com/
+admin page- https://connect-local-adminnew.onrender.com/
 
 ## Features
 
