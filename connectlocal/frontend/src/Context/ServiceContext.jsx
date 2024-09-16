@@ -14,12 +14,12 @@ const ServiceContextProvider = ({ children }) => {
     const [all_services,setAll_product] = useState([]);
     const [cartItems, setCartItems] = useState(getDefaultCart());
     useEffect(()=>{
-        fetch('http://localhost:4000/allproducts')
+        fetch('https://connect-local-backendnew.onrender.com/allproducts')
         .then((response)=>response.json())
         .then((data)=>setAll_product(data))
 
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/getcart',{
+            fetch('https://connect-local-backendnew.onrender.com/getcart',{
                 method:'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -36,7 +36,7 @@ const ServiceContextProvider = ({ children }) => {
     const addToCart = (itemId) =>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}));
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/addtocart',{
+            fetch('https://connect-local-backendnew.onrender.com/addtocart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -54,7 +54,7 @@ const ServiceContextProvider = ({ children }) => {
     const removeFromCart = (itemId) =>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}));
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/decrementcart',{
+            fetch('https://connect-local-backendnew.onrender.com/decrementcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
