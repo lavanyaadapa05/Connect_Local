@@ -56,7 +56,7 @@ const ProductDisplay = (props) => {
 
         try {
             // Submit booking data
-            const bookingResponse = await fetch('http://localhost:4000/book', {
+            const bookingResponse = await fetch('https://connect-local-backendnew.onrender.com/book', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ const ProductDisplay = (props) => {
                 };
 
                 try {
-                    const smsResponse = await axios.post('http://localhost:4000/api/send-sms', smsData);
+                    const smsResponse = await axios.post('https://connect-local-backendnew.onrender.com/api/send-sms', smsData);
                     console.log('SMS sent successfully:', smsResponse.data);
                 } catch (smsError) {
                     console.error('Error sending SMS:', smsError);
