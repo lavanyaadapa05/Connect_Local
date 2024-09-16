@@ -68,9 +68,10 @@ app.post('/upload', upload.single('product'), (req, res) => {
     if (!req.file) {
       throw new Error('No file uploaded');
     }
+    const imageUrl = `${req.protocol}://${req.get('host')}/images/${req.file.filename}`; // Dynamically get the domain
     res.json({
       success: 1,
-      image_url: `http://localhost:${port}/images/${req.file.filename}`
+      image_url: imageUrl
     });
   } catch (error) {
     console.error('Error in /upload endpoint:', error);
